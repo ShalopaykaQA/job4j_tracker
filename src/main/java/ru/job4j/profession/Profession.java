@@ -7,6 +7,13 @@ public class Profession {
     private String surname;
     private String education;
 
+    public Profession(String birthday, String name, String surname, String education) {
+        this.birthday = birthday;
+        this.name = name;
+        this.surname = surname;
+        this.education = education;
+    }
+
     public String getSurname() {
         return surname;
     }
@@ -38,6 +45,4 @@ public class Profession {
     public void setName(String name) {
         this.name = name;
     }
-
-
 }

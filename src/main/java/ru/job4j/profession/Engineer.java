@@ -5,6 +5,10 @@ public class Engineer extends Profession {
     private String designing;
     private String construction;
 
+    public Engineer(String birthday, String name, String surname, String education) {
+        super(birthday, name, surname, education);
+    }
+
     public String getDesigning() {
         return designing;
     }
@@ -19,10 +23,6 @@ public class Engineer extends Profession {
 
     public void setConstruction(String construction) {
         this.construction = construction;
-    }
 
-    public Engineer(String designing, String construction) {
-        this.designing = designing;
-        this.construction = construction;
     }
 }

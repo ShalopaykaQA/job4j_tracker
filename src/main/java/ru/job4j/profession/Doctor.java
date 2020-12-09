@@ -5,6 +5,10 @@ public class Doctor extends Profession {
     private String diagnose;
     private String medications;
 
+    public Doctor(String birthday, String name, String surname, String education) {
+        super(birthday, name, surname, education);
+    }
+
     public String getDiagnose() {
         return diagnose;
     }
@@ -20,9 +24,4 @@ public class Doctor extends Profession {
         this.medications = analysis;
     }
 
-    public Doctor(String diagnose, String analysis, String inspection) {
-        this.diagnose = diagnose;
-        this.medications = analysis;
-
-    }
 }
