@@ -19,6 +19,6 @@ public class StartUI {
         tracker.add(item6);
         Item item7 = new Item("Zayava");
         tracker.add(item7);
-        System.out.println(tracker.findById(6));
+        System.out.println(tracker.findById(4));
     }
 }
