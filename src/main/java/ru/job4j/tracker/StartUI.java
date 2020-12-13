@@ -6,10 +6,8 @@ public class StartUI {
         while (run) {
             this.showMenu(actions);
             int select = input.askInt("Select: ");
-           // System.out.println();
             UserAction action = actions[select];
             run = actions[select].execute(input, tracker);
-           // System.out.println();
         }
     }
 
