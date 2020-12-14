@@ -9,7 +9,7 @@ public class ShowAllAction implements UserAction {
 
     @Override
     public String name() {
-        return "=== Show all items ====";
+        return "Show all items";
     }
 
     @Override
