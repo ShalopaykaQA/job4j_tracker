@@ -6,7 +6,10 @@ public class TrackerSingleField {
 
     private static TrackerSingleField instance;
 
+    private Tracker tracker;
+
     private TrackerSingleField() {
+        this.tracker = new Tracker();
     }
 
     public static TrackerSingleField getInstance() {
@@ -15,5 +18,9 @@ public class TrackerSingleField {
         }
         return instance;
     }
-
+    public Tracker getTracker() {
+        return tracker;
+    }
 }
+
+
