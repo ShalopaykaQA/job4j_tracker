@@ -7,18 +7,13 @@ public class TrackerSingleFinalClass {
     private Tracker tracker;
 
     private TrackerSingleFinalClass() {
-        this.tracker = new Tracker();
     }
 
-    public Tracker getTracker() {
-        return tracker;
-    }
-
-    public static TrackerSingleFinalClass getInstance() {
+    public static Tracker getInstance() {
         return Holder.INSTANCE;
     }
 
     private static final class Holder {
-        private static final TrackerSingleFinalClass INSTANCE = new TrackerSingleFinalClass();
+        private static final Tracker INSTANCE = new Tracker();
     }
 }
