@@ -14,7 +14,7 @@ public class JobTest {
         Comparator<Job> cmpAscName = new JobAscByName();
         int rsl = cmpAscName.compare(
                 new Job("One", 1),
-                new Job("Two",2)
+                new Job("Two", 2)
         );
         assertThat(rsl, lessThan(0));
     }
@@ -24,7 +24,7 @@ public class JobTest {
         Comparator<Job> cmpDescName = new JobAscByName();
         int rsl = cmpDescName.compare(
                 new Job("Two", 1),
-                new Job("One",2)
+                new Job("One", 2)
         );
         assertThat(rsl, greaterThan(0));
     }
@@ -34,7 +34,7 @@ public class JobTest {
         Comparator<Job> cmpAscPriority = new JobAscByPriority();
         int rsl = cmpAscPriority.compare(
                 new Job("One", 1),
-                new Job("Two",2)
+                new Job("Two", 2)
         );
         assertThat(rsl, lessThan(0));
     }
@@ -44,7 +44,7 @@ public class JobTest {
         Comparator<Job> cmpDescPriority = new JobDescByPriority();
         int rsl = cmpDescPriority.compare(
                 new Job("One", 1),
-                new Job("Two",2)
+                new Job("Two", 2)
         );
         assertThat(rsl, greaterThan(0));
     }
@@ -55,7 +55,7 @@ public class JobTest {
                 .thenComparing(new JobAscByName());
         int rsl = cmpDescPriority.compare(
                 new Job("One", 1),
-                new Job("Two",1)
+                new Job("Two", 1)
         );
         assertThat(rsl, lessThan(0));
     }

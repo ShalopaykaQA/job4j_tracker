@@ -12,6 +12,7 @@ public class Tracker {
         items.add(item);
         return item;
     }
+
     private int indexOf(int id) {
         int rsl = -1;
         for (int i = 0; i < items.size(); i++) {
@@ -42,15 +43,17 @@ public class Tracker {
     public List<Item> findAll() {
         return items;
     }
+
     public boolean replace(int id, Item item) {
         int i = indexOf(id);
         boolean rsl = i != -1;
-        if(rsl) {
+        if (rsl) {
             item.setId(id);
             items.set(i, item);
         }
         return rsl;
     }
+
     public boolean delete(int id) {
         int i = indexOf(id);
         boolean rsl = i != -1;

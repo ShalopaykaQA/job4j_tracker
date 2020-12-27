@@ -1,6 +1,5 @@
 package ru.job4j.tracker;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -8,10 +7,12 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertThat;
 
 public class StartUITest {
     private static final String LN = System.lineSeparator();
+
     @Test
     public void whenCreateItem() {
         Output out = new ConsoleOutput();
@@ -69,10 +70,13 @@ public class StartUITest {
         };
         new StartUI(out).init(in, tracker, Arrays.asList(actions));
         assertThat(out.toString(), is(
-                "Menu." + LN +
-                        "0. Exit Program" + LN
+                "Menu."
+                        + LN
+                        + "0. Exit Program"
+                        + LN
         ));
     }
+
     @Test
     public void whenInvalidExit() {
         Output out = new StubOutput();
@@ -86,11 +90,16 @@ public class StartUITest {
         new StartUI(out).init(in, tracker, Arrays.asList(actions));
         assertThat(out.toString(), is(
                 String.format(
-                        "Menu." + LN +
-                                "0. Exit Program" + LN +
-                                "Wrong input, you can select: 0 .. 0" + LN +
-                                "Menu." + LN +
-                                "0. Exit Program" + LN
+                        "Menu."
+                                + LN
+                                + "0. Exit Program"
+                                + LN
+                                + "Wrong input, you can select: 0 .. 0"
+                                + LN
+                                + "Menu."
+                                + LN
+                                + "0. Exit Program"
+                                + LN
                 )
         ));
     }
@@ -108,13 +117,19 @@ public class StartUITest {
         };
         new StartUI(out).init(in, tracker, Arrays.asList(actions));
         assertThat(out.toString(), is(
-                "Menu." + LN +
-                        "0. Show all items" + LN +
-                        "1. Exit Program" + LN +
-                        "=== All items ====" + LN +
-                        "Menu." + LN +
-                        "0. Show all items" + LN +
-                        "1. Exit Program" + LN
+                "Menu." + LN
+                        + "0. Show all items"
+                        + LN
+                        + "1. Exit Program"
+                        + LN
+                        + "=== All items ===="
+                        + LN
+                        + "Menu."
+                        + LN
+                        + "0. Show all items"
+                        + LN
+                        + "1. Exit Program"
+                        + LN
         ));
     }
 
@@ -131,14 +146,21 @@ public class StartUITest {
         };
         new StartUI(out).init(input, tracker, Arrays.asList(actions));
         assertThat(out.toString(), is(
-                "Menu." + LN +
-                        "0. Find item by Id" + LN +
-                        "1. Exit Program" + LN +
-                        "=== Find item by Id ===" + LN +
-                        "Items with this id was not found" + LN +
-                        "Menu." + LN +
-                        "0. Find item by Id" + LN +
-                        "1. Exit Program" + LN
+                "Menu." + LN
+                        + "0. Find item by Id"
+                        + LN
+                        + "1. Exit Program"
+                        + LN
+                        + "=== Find item by Id ==="
+                        + LN
+                        + "Items with this id was not found"
+                        + LN
+                        + "Menu."
+                        + LN
+                        + "0. Find item by Id"
+                        + LN
+                        + "1. Exit Program"
+                        + LN
         ));
     }
 
@@ -155,14 +177,21 @@ public class StartUITest {
         };
         new StartUI(out).init(input, tracker, Arrays.asList(actions));
         assertThat(out.toString(), is(
-                "Menu." + LN +
-                        "0. Find items by name" + LN +
-                        "1. Exit Program" + LN +
-                        "=== Find item by name ===" + LN +
-                        "No items with this name were found" + LN +
-                        "Menu." + LN +
-                        "0. Find items by name" + LN +
-                        "1. Exit Program" + LN
+                "Menu." + LN
+                        + "0. Find items by name"
+                        + LN
+                        + "1. Exit Program"
+                        + LN
+                        + "=== Find item by name ==="
+                        + LN
+                        + "No items with this name were found"
+                        + LN
+                        + "Menu."
+                        + LN
+                        + "0. Find items by name"
+                        + LN
+                        + "1. Exit Program"
+                        + LN
         ));
     }
 }

@@ -29,6 +29,7 @@ public class UserTest {
                 );
         assertThat(rsl, greaterThan(0));
     }
+
     @Test
     public void whenPetrVSPetr() {
         Set<User> users = new TreeSet<>();

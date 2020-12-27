@@ -1,7 +1,5 @@
 package ru.job4j.tracker;
 
-import ru.job4j.tracker.Item;
-
 public class TrackerSingleField {
 
     private static TrackerSingleField instance;
@@ -18,6 +16,7 @@ public class TrackerSingleField {
         }
         return instance;
     }
+
     public Tracker getTracker() {
         return tracker;
     }
