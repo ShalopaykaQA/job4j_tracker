@@ -70,4 +70,24 @@ public class JobTest {
         );
         assertThat(rsl, lessThan(0));
     }
+    @Test
+    public void whenCmpByPriorityAndName() {
+        Comparator<Job> cmpNamePriority = new JobAscByPriority()
+                .thenComparing(new JobDescByName());
+        int rsl = cmpNamePriority.compare(
+                new Job("Fix bug", 0),
+                new Job("Fix bug", 1)
+        );
+        assertThat(rsl, lessThan(0));
+    }
+    @Test
+    public void whenCmpByPriorityAndName1() {
+        Comparator<Job> cmpNamePriority = new JobAscByPriority()
+                .thenComparing(new JobDescByName());
+        int rsl = cmpNamePriority.compare(
+                new Job("Fix bug", 1),
+                new Job("Fix bug", 0)
+        );
+        assertThat(rsl, greaterThan(0));
+    }
 }
