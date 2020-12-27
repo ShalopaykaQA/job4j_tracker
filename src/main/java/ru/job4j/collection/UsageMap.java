@@ -6,9 +6,9 @@ public class UsageMap {
     public static void main(String[] args) {
         HashMap<String, String> map = new HashMap<>();
         map.put("parsentev@yandex.ru", "Petr Arsentev");
-        map.put("andrey@yandex.ru", "Andrey Bosy");
+        map.put("shalopaykay@ygmailcom", "Elvira Semenova");
         for (String key : map.keySet()) {
-            System.out.println(key + map.get(key));
+            System.out.println(key + " = " + map.get(key));
         }
     }
 }
