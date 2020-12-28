@@ -11,6 +11,7 @@ import static org.junit.Assert.assertThat;
 
 public class StartUITest {
     private static final String LN = System.lineSeparator();
+
     @Test
     public void whenCreateItem() {
         Output out = new ConsoleOutput();
