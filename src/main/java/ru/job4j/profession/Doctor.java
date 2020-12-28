@@ -3,6 +3,7 @@ package ru.job4j.profession;
 public class Doctor extends Profession {
 
     private String diagnose;
+
     private String medications;
 
     public Doctor(String birthday, String name, String surname, String education) {
@@ -13,15 +14,16 @@ public class Doctor extends Profession {
         return diagnose;
     }
 
-    public Doctor setDiagnose(String diagnose) {
-        return this;
+    public void setDiagnose(String diagnose) {
+        this.diagnose = diagnose;
     }
-    public String getAnalysis() {
+
+    public String getMedications() {
         return medications;
     }
 
-    public void setAnalysis(String analysis) {
-        this.medications = analysis;
+    public void setMedications(String medications) {
+        this.medications = medications;
     }
 
 }

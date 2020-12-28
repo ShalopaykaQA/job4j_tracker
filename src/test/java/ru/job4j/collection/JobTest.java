@@ -1,6 +1,7 @@
 package ru.job4j.collection;
 
 import org.junit.Test;
+
 import java.util.Comparator;
 
 import static org.hamcrest.Matchers.greaterThan;
@@ -10,6 +11,7 @@ import static org.junit.Assert.assertThat;
 public class JobTest {
 
     @Test
+
     public void whenCmpAscByName() {
         Comparator<Job> cmpAscName = new JobAscByName();
         int rsl = cmpAscName.compare(
@@ -20,6 +22,7 @@ public class JobTest {
     }
 
     @Test
+
     public void whenCmpDescByName() {
         Comparator<Job> cmpDescName = new JobAscByName();
         int rsl = cmpDescName.compare(
@@ -30,6 +33,7 @@ public class JobTest {
     }
 
     @Test
+
     public void whenCmpAscByPriority() {
         Comparator<Job> cmpAscPriority = new JobAscByPriority();
         int rsl = cmpAscPriority.compare(
@@ -40,6 +44,7 @@ public class JobTest {
     }
 
     @Test
+
     public void whenCmpDescByPriority() {
         Comparator<Job> cmpDescPriority = new JobDescByPriority();
         int rsl = cmpDescPriority.compare(
@@ -50,6 +55,7 @@ public class JobTest {
     }
 
     @Test
+
     public void whenCmpDescByPriority1() {
         Comparator<Job> cmpDescPriority = new JobAscByPriority()
                 .thenComparing(new JobAscByName());
@@ -61,6 +67,7 @@ public class JobTest {
     }
 
     @Test
+
     public void whenCmpByNameAndPriority2() {
         Comparator<Job> cmpNamePriority = new JobDescByName()
                 .thenComparing(new JobDescByPriority());
@@ -70,7 +77,9 @@ public class JobTest {
         );
         assertThat(rsl, lessThan(0));
     }
+
     @Test
+
     public void whenCmpByPriorityAndName() {
         Comparator<Job> cmpNamePriority = new JobAscByPriority()
                 .thenComparing(new JobDescByName());
@@ -80,7 +89,9 @@ public class JobTest {
         );
         assertThat(rsl, lessThan(0));
     }
+
     @Test
+
     public void whenCmpByPriorityAndName1() {
         Comparator<Job> cmpNamePriority = new JobAscByPriority()
                 .thenComparing(new JobDescByName());
