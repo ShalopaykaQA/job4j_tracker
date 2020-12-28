@@ -1,4 +1,4 @@
-package ru.job4j.tracker;
+package ru.job4j.strategy;
 
 import static java.lang.Math.sqrt;
 import static java.lang.Math.pow;
